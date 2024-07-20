@@ -3,7 +3,6 @@ using MyApp.RegisterAndLoginPage.EmployeeSetting;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using static Java.Util.Jar.Attributes;
 
 namespace MyApp
 {
@@ -102,12 +101,12 @@ namespace MyApp
             string email = eemail.Replace('.', '_');
             employeeModel.Email = email;
             employeeModel.Name = nname;
-            PlayerData.Email = email;
-            App.Current.Properties["Name"] = nname;
-            App.Current.Properties["RecordMathGameMinus"] = 0;
-            App.Current.Properties["RecordMathGame"] = 0;
-            App.Current.Properties["RecordPuzzleGame"] = 0;
-            App.Current.Properties["RecordMemoryGame"] = 0;
+            RegisterAndLoginPage.EmployeeSetting.PlayerData.Email = email;
+            RegisterAndLoginPage.EmployeeSetting.PlayerData.Name = nname;
+            RegisterAndLoginPage.EmployeeSetting.PlayerData.RecordMathGameMinus = 0;
+            RegisterAndLoginPage.EmployeeSetting.PlayerData.RecordMathGame = 0;
+            RegisterAndLoginPage.EmployeeSetting.PlayerData.RecordPuzzleGame = 0;
+            RegisterAndLoginPage.EmployeeSetting.PlayerData.RecordMemoryGame = 0;
             await employee.AddOrUpdateEmployee(employeeModel);
             saveEmailOnTxt.SaveEmail(email);
         }

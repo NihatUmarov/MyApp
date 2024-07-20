@@ -65,6 +65,7 @@ namespace MyApp.RegisterAndLoginPage.EmployeeSetting
                 RecordMemoryGame = f.Object.RecordMemoryGame,
                 Email = f.Object.Email,
             }).ToList();
+            
         }
         public async Task<bool> AddOrUpdateEmployee(EmployeeModel employeeModel)
         {

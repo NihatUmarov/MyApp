@@ -6,6 +6,7 @@ namespace MyApp.RegisterAndLoginPage.EmployeeSetting
 {
     public class PlayerData
     {
+        public static string Email { get; set; }
         public static string Name { get; set; }
         public static int RecordMathGame { get; set; }
         public static int RecordMathGameMinus { get; set; }

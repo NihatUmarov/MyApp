@@ -13,11 +13,11 @@ namespace MyApp
         {
             InitializeComponent();
             
-            Name.Text = PlayerData.Name;
-            MathGameMinusRecord.Text = Convert.ToString(PlayerData.RecordMathGameMinus);
-            MathGameRecord.Text = Convert.ToString(PlayerData.RecordMathGame);
-            MemoryGameRecord.Text = Convert.ToString(PlayerData.RecordMemoryGame);
-            PuzzleGameRecord.Text = Convert.ToString(PlayerData.RecordPuzzleGame);
+            Name.Text = RegisterAndLoginPage.EmployeeSetting.PlayerData.Name;
+            MathGameMinusRecord.Text = Convert.ToString(RegisterAndLoginPage.EmployeeSetting.PlayerData.RecordMathGameMinus);
+            MathGameRecord.Text = Convert.ToString(RegisterAndLoginPage.EmployeeSetting.PlayerData.RecordMathGame);
+            MemoryGameRecord.Text = Convert.ToString(RegisterAndLoginPage.EmployeeSetting.PlayerData.RecordMemoryGame);
+            PuzzleGameRecord.Text = Convert.ToString(RegisterAndLoginPage.EmployeeSetting.PlayerData.RecordPuzzleGame);
         }
 
         private async void BtnRecords_Clicked2(object sender, EventArgs e)
