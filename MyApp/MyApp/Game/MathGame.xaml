@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.MathGame"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="MathGameImageBackground.png"
+             NavigationPage.HasNavigationBar="False" 
+             Padding="10">
+
+    <StackLayout VerticalOptions="Center">
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="0"/>
+                <RowDefinition Height="90"/>
+            </Grid.RowDefinitions>
+
+
+            <Label Grid.Row="0" FontSize="34" Margin="0,0,0,50"  HorizontalOptions="Center" TextColor="White" x:Name="correctLabel"></Label>
+
+            <Grid Grid.Row="1" HorizontalOptions="Center">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Button  FontSize="50" TextColor="Black" BorderColor="Black" FontAttributes="Bold"  HeightRequest="100" Grid.Row="0" CornerRadius="20" BackgroundColor="#fff"
+                    x:Name="randomNumbers" Text="8"></Button>
+            </Grid>
+            <Grid Grid.Row="3" HorizontalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="160"/>
+                    <ColumnDefinition Width="1"/>
+                    <ColumnDefinition Width="160"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="0" />
+                    <RowDefinition Height="90" />
+                </Grid.RowDefinitions>
+                <Button  FontSize="45" TextColor="Black" FontAttributes="Bold"  Grid.Row="0"  CornerRadius="20" BackgroundColor="#fff"
+                    Grid.Column="0" StyleId="1" x:Name="But1" Clicked="But_Clicked1" Text="8"></Button>
+
+                <Button FontSize="45" TextColor="Black" FontAttributes="Bold"  CornerRadius="20" BackgroundColor="#fff"
+                        Grid.Row="0" StyleId="2" Grid.Column="2" x:Name="But2" Clicked="But_Clicked2" Text="4"></Button>
+
+                <Button  FontSize="45" TextColor="Black" FontAttributes="Bold"   Grid.Row="2"  CornerRadius="20" BackgroundColor="#fff"
+                        Grid.Column="0" StyleId="3" x:Name="But3" Clicked="But_Clicked3" Text="1"></Button>
+
+                <Button  FontSize="45" TextColor="Black" FontAttributes="Bold"  Grid.Row="2" CornerRadius="20" BackgroundColor="#fff"
+                        Grid.Column="2" StyleId="4" x:Name="But4" Clicked="But_Clicked4" Text="12"></Button>
+
+            </Grid>
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>

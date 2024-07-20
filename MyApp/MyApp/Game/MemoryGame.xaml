@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MyApp.MemoryGame"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Shell.NavBarIsVisible="False"
+    BackgroundImageSource="MemoryGamesImageBackground.png"
+    NavigationPage.HasNavigationBar="False">
+
+    <StackLayout
+        Margin="0,15,0,0"
+        Spacing="15"
+        VerticalOptions="FillAndExpand">
+
+        <ProgressBar x:Name="progressBar" ProgressColor="#00ff48"  />
+
+        <StackLayout Orientation="Horizontal">
+
+            <Label x:Name="scoreLabel" Margin="20,0,0,0" FontSize="18" HorizontalOptions="StartAndExpand" Text="Счет: 0" FontAttributes="Bold" TextColor="#fff" />
+
+            <Label x:Name="bestScoreLabel" Margin="0,0,20,0" FontSize="18" FontAttributes="Bold" HorizontalOptions="EndAndExpand" Text="Рекорд: 0" TextColor="#fff" />
+        </StackLayout>
+
+        <Label x:Name="label" Margin="0,10,0,-20" FontSize="18" HorizontalOptions="Center" Text="" TextColor="#fff" VerticalOptions="Center" />
+
+        <Grid
+            x:Name="gridView"
+            Margin="20,50,20,0"
+            HorizontalOptions="Fill"
+            VerticalOptions="Center">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button  x:Name="one" Grid.Row="0"  Grid.Column="0"  CornerRadius="20" BackgroundColor="#fff" Pressed="ButtonPressed"  Released="ButtonReleased" />
+            <Button  x:Name="two" Grid.Row="0" Grid.Column="1" CornerRadius="20" BackgroundColor="#fff" Pressed="ButtonPressed" Released="ButtonReleased" />
+            <Button x:Name="three" Grid.Row="0"  Grid.Column="2" CornerRadius="20"  BackgroundColor="#fff" Pressed="ButtonPressed" Released="ButtonReleased" />
+            <Button x:Name="four"  Grid.Row="1"  Grid.Column="0" CornerRadius="20"  BackgroundColor="#fff" Pressed="ButtonPressed" Released="ButtonReleased" />
+            <Button x:Name="five" Grid.Row="1" Grid.Column="1" CornerRadius="20" BackgroundColor="#fff" Pressed="ButtonPressed"  Released="ButtonReleased" />
+            <Button x:Name="six" Grid.Row="1" Grid.Column="2" CornerRadius="20" BackgroundColor="#fff" Pressed="ButtonPressed" Released="ButtonReleased" />
+            <Button  x:Name="seven"  Grid.Row="2" Grid.Column="0"  CornerRadius="20"  BackgroundColor="#fff" Pressed="ButtonPressed" Released="ButtonReleased" />
+            <Button x:Name="eight" Grid.Row="2"  Grid.Column="1" CornerRadius="20" BackgroundColor="#fff" Pressed="ButtonPressed" Released="ButtonReleased" />
+            <Button  x:Name="nine" Grid.Row="2"  Grid.Column="2" CornerRadius="20" BackgroundColor="#fff" Pressed="ButtonPressed" Released="ButtonReleased" />
+        </Grid>
+
+        <Button  x:Name="startGameButton"  BackgroundColor="#00ff48" Clicked="StartGameButtonClicked" HorizontalOptions="Center" Text="Начать" FontSize="25"
+                 FontAttributes="Bold"  TextColor="#fff"  VerticalOptions="End" Margin="0,30" CornerRadius="20" WidthRequest="150" />
+
+    </StackLayout>
+
+</ContentPage>

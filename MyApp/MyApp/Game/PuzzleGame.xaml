@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.PuzzleGame"
+             Shell.NavBarIsVisible="False"   
+             BackgroundImageSource="MemoryGamesImageBackground.png"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid HeightRequest="150">
+                <Label x:Name="MovesLabel" Text="Ходов: 0" HorizontalOptions="Start" FontSize="20" FontAttributes="Bold" TextColor="White" Margin="20,30,0,0" ></Label>
+                <Label x:Name="RecordMovesLabel" Text="Рекорд: 0" HorizontalOptions="End" FontSize="20" FontAttributes="Bold" TextColor="White" Margin="0,30,20,0" ></Label>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="387" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Label Text="Пятнашки" Margin="0,-80,0,0" FontSize="40" HorizontalOptions="Center" TextColor="#fff" FontAttributes="Bold" VerticalOptions="Center" Grid.Column="0" Grid.Row="0" />
+                
+                <!-- puzzles -->
+                <Grid Grid.Column="0" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Start" Margin="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="110" />
+                        <RowDefinition Height="110" />
+                        <RowDefinition Height="110" />
+                    </Grid.RowDefinitions>
+                    <Button x:Name="puz1" Clicked="Puz1_Clicked" FontAttributes="Bold" TextColor="#0051ad" CornerRadius="20" BackgroundColor="#fff" WidthRequest="110" FontSize="55" Grid.Column="0" Grid.Row="0" />
+                    <Button x:Name="puz2" Clicked="Puz2_Clicked" FontAttributes="Bold"  TextColor="#0051ad" CornerRadius="20" BackgroundColor="#fff" WidthRequest="110" FontSize="55" Grid.Column="1" Grid.Row="0" />
+                    <Button x:Name="puz3" Clicked="Puz3_Clicked" FontAttributes="Bold"  TextColor="#0051ad" CornerRadius="20" BackgroundColor="#fff" WidthRequest="110" FontSize="55" Grid.Column="2" Grid.Row="0" />
+                    <Button x:Name="puz4" Clicked="Puz4_Clicked" FontAttributes="Bold"  TextColor="#0051ad" CornerRadius="20" BackgroundColor="#fff" WidthRequest="110" FontSize="55" Grid.Column="0" Grid.Row="1" />
+                    <Button x:Name="puz5" Clicked="Puz5_Clicked" FontAttributes="Bold"  TextColor="#0051ad" CornerRadius="20" BackgroundColor="#fff" WidthRequest="110" FontSize="55" Grid.Column="1" Grid.Row="1" />
+                    <Button x:Name="puz6" Clicked="Puz6_Clicked" FontAttributes="Bold"  TextColor="#0051ad" CornerRadius="20" BackgroundColor="#fff" WidthRequest="110" FontSize="55" Grid.Column="2" Grid.Row="1" />
+                    <Button x:Name="puz7" Clicked="Puz7_Clicked" FontAttributes="Bold"  TextColor="#0051ad" CornerRadius="20" BackgroundColor="#fff" WidthRequest="110" FontSize="55" Grid.Column="0" Grid.Row="2" />
+                    <Button x:Name="puz8" Clicked="Puz8_Clicked" FontAttributes="Bold" TextColor="#0051ad" CornerRadius="20" BackgroundColor="#fff" WidthRequest="110" FontSize="55" Grid.Column="1" Grid.Row="2" />
+                    <Button x:Name="puz9" Clicked="Puz9_Clicked" FontAttributes="Bold" TextColor="#0051ad" CornerRadius="20" BackgroundColor="#fff" WidthRequest="110" FontSize="55" Grid.Column="2" Grid.Row="2" />
+                </Grid>
+
+                <Grid Grid.Row="2" HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="400" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0"  x:Name="WinTxt" Text="Умничка,у тебя получилось!" FontSize="24" TextColor="#0051ad" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Start" IsVisible="true" />
+                </Grid>
+                <Grid Grid.Row="3" HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" Grid.Column="0" x:Name="BtnGameReset" Text="Начать Заново" Clicked="GameReset_Clicked" FontAttributes="Bold"  TextColor="#fff" CornerRadius="20" IsVisible="true"  BackgroundColor="#0051ad" WidthRequest="110" FontSize="24"/>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.TaskList"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="TaskListBackground.png">
+
+    <ContentPage.Content NavigationPage.HasNavigationBar="false" >
+        <StackLayout>
+          <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="130"></RowDefinition>
+                <RowDefinition Height="1000"></RowDefinition>
+            </Grid.RowDefinitions>
+                <ImageButton IsVisible="False" x:Name="ButtonCross" Clicked="BtnCross_Clicked" CornerRadius="10" BorderColor="Transparent" BackgroundColor="Transparent" Source="CrossImage" Grid.Row="0" HorizontalOptions="Start" Margin="10,10,10,-15" ></ImageButton>
+                <ImageButton IsVisible="False" x:Name="ButtonAccount" Clicked="BtnAccount_Clicked" CornerRadius="10" Source="AccountImage" Grid.Row="0" HorizontalOptions="End" Margin="0,10,10,-15" ></ImageButton>
+                <Grid Grid.Row="1" HorizontalOptions="Center" Padding="0,-10,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button BackgroundColor="#49000000"  CornerRadius="30" ></Button>
+                </Grid>
+                <Grid HorizontalOptions="Center" Grid.Row="1"  Padding="0,-10,0,10" >
+                    <Grid HorizontalOptions="Center" VerticalOptions="Center" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="250"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Button x:Name="Records" FontAttributes="Bold" FontSize="13" TextColor="White" Clicked="BtnRecords_Clicked" Text="рекорды" WidthRequest="100" BackgroundColor="Transparent" VerticalOptions="Center" CornerRadius="30" HorizontalOptions="StartAndExpand" Margin="0,0,0,0" ></Button>
+                        <Button x:Name="Gaming" TextTransform="Uppercase" FontSize="15" FontAttributes="Bold" TextColor="#FF8A2BE2" Clicked="BtnGamingClicked" Text="игры" WidthRequest="75" BackgroundColor="White" VerticalOptions="Center" CornerRadius="30" HorizontalOptions="Center" ></Button>
+                        <Button x:Name="UsersProfil" FontAttributes="Bold" FontSize="13" TextColor="White" Clicked="UserProfil_Clicked" Text="профиль" WidthRequest="100" BackgroundColor="Transparent" VerticalOptions="Center" CornerRadius="30" HorizontalOptions="End" Margin="0,0,0,0" ></Button>
+
+                    </Grid>
+                </Grid>
+                <Label Grid.Row="2"  HorizontalOptions="Center" x:Name="txtText" Text="Выберите игру" FontSize="40" TextColor="#fff" FontAttributes="Bold" Margin="0,30,0,0" ></Label>
+
+                <Frame Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  BackgroundColor="#fff" HeightRequest="1500"  BorderColor="#fff" CornerRadius="50">
+
+                        <Grid Grid.Column="0" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Start" RowSpacing="20" Padding="0,50,0,0">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0" />
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="0"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="150"></RowDefinition>
+                                <RowDefinition Height="150"></RowDefinition>
+                                <RowDefinition Height="20"></RowDefinition>
+
+                            </Grid.RowDefinitions>
+                            <ImageButton Grid.Row="0" Grid.Column="1" Source="PuzzleGameIcon.png" BorderColor="AliceBlue"
+                             Aspect="Fill"  x:Name="BtnTask1" 
+                            Clicked="BtnTask1_Clicked" CornerRadius="30" Margin="0,0,0,0" HorizontalOptions="StartAndExpand"
+                        ></ImageButton>
+                            <ImageButton Grid.Row="0" Grid.Column="3" Source="MemoryGameIcon.png" Aspect="Fill" BorderColor="AliceBlue"
+                                  x:Name="BtnTask2"
+                            Clicked="BtnTask2_Clicked" CornerRadius="30" HorizontalOptions="Center"
+                        ></ImageButton>
+                            <ImageButton Grid.Row="1" Grid.Column="1" Source="MathGameIcon"  Aspect="Fill"
+                                     x:Name="BtnTask3"
+                            Clicked="BtnTask3_Clicked" CornerRadius="30" HorizontalOptions="Start"
+                        ></ImageButton>
+                        <ImageButton Grid.Row="1" Grid.Column="3" Source="MathGameMinusIcon.png" Aspect="Fill"  x:Name="BtnTask4"
+                            Clicked="BtnTask4_Clicked" CornerRadius="30" 
+                            HorizontalOptions="End"
+                        ></ImageButton>
+                        <Button Grid.Row="3" Grid.Column="2" HeightRequest="65" Margin="-80,0,-80,0"  FontSize="27" FontAttributes="Bold"
+                            TextColor="#fff" BackgroundColor="#6a55f2" x:Name="BtnGame"
+                            Clicked="BtnGame_Clicked" CornerRadius="30" Text="Играть" >
+                        </Button>
+
+                    </Grid>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.RecordPage"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="TaskListBackground.png">
+
+    <ContentPage.Content NavigationPage.HasNavigationBar="false" >
+        <RelativeLayout>
+            <StackLayout>
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="1000"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton IsVisible="False" CornerRadius="10" BorderColor="Transparent" BackgroundColor="Transparent" Source="CrossImage" Grid.Row="0" HorizontalOptions="Start" Margin="10,10,10,-15" ></ImageButton>
+                <ImageButton IsVisible="False" CornerRadius="10" Source="AccountImage" Grid.Row="0" HorizontalOptions="End" Margin="0,10,10,-15" ></ImageButton>
+                <Grid Grid.Row="1" HorizontalOptions="Center" Padding="0,-10,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button BackgroundColor="#49000000"  CornerRadius="30" ></Button>
+                </Grid>
+                <Grid HorizontalOptions="Center" Grid.Row="1"  Padding="0,-10,0,10" >
+                    <Grid HorizontalOptions="Center" VerticalOptions="Center" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="250"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Button x:Name="Records1" FontAttributes="Bold" FontSize="13" TextColor="#FF8A2BE2" Clicked="BtnRecords_Clicked1" Text="рекорды" WidthRequest="100" BackgroundColor="White" VerticalOptions="Center" CornerRadius="30" HorizontalOptions="StartAndExpand" Margin="0,0,0,0" ></Button>
+                        <Button x:Name="Gaming1" TextTransform="Uppercase" FontSize="15" FontAttributes="Bold" TextColor="White" Clicked="BtnGamingClicked1" Text="игры" WidthRequest="100" BackgroundColor="Transparent" VerticalOptions="Center" CornerRadius="30" HorizontalOptions="Center" ></Button>
+                        <Button x:Name="UsersProfil1" FontAttributes="Bold" FontSize="13" TextColor="White" Clicked="UserProfil_Clicked1" Text="профиль" WidthRequest="100" BackgroundColor="Transparent" VerticalOptions="Center" CornerRadius="30" HorizontalOptions="End" Margin="0,0,0,0" ></Button>
+
+                    </Grid>
+                </Grid>
+                    <Frame Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="1500"  BackgroundColor="#fff"  BorderColor="#fff" CornerRadius="50">
+
+                    <Grid HorizontalOptions="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="590"></RowDefinition>
+                            <RowDefinition Height="300"></RowDefinition>
+                            <RowDefinition Height="200"></RowDefinition>
+                            <RowDefinition Height="100"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Column="0" Grid.Row="0"  VerticalOptions="Start" HorizontalOptions="Center" RowSpacing="20" Padding="0,20,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="400"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <ImageButton Grid.Row="0" WidthRequest="400" HeightRequest="600" BackgroundColor="#ded9ff" CornerRadius="40" HorizontalOptions="Center" Margin="0,80,0,-80" VerticalOptions="Center"></ImageButton>
+
+                                <Grid Grid.Row="0"  VerticalOptions="Start" HorizontalOptions="Center" RowSpacing="20" Padding="0,20,0,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="80"></RowDefinition>
+                                        <RowDefinition Height="50"></RowDefinition>
+                                        <RowDefinition Height="50"></RowDefinition>
+                                        <RowDefinition Height="50"></RowDefinition>
+                                        <RowDefinition Height="50"></RowDefinition>
+                                        <RowDefinition Height="50"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Grid.Row="0" Margin="0,-40,0,0" Text="Топ 5" TextColor="#FF8A2BE2" FontAttributes="Bold" FontSize="32"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Row="0" Margin="0,10,0,0" Text="Игра пятнашки" x:Name="RecordTxt" TextColor="#9c9c9c" FontAttributes="Bold" FontSize="30"  HorizontalOptions="Center"></Label>
+
+
+                                    <Button IsEnabled="False" Grid.Row="1" BackgroundColor="#fbfaff"  CornerRadius="30" WidthRequest="300"></Button>
+                                    <Button IsEnabled="False" Grid.Row="2" HorizontalOptions="Center" BackgroundColor="#fbfaff"  CornerRadius="30" WidthRequest="300"></Button>
+                                    <Button IsEnabled="False" Grid.Row="3" HorizontalOptions="Center" BackgroundColor="#fbfaff"  CornerRadius="30" WidthRequest="300"></Button>
+                                    <Button IsEnabled="False" Grid.Row="4" HorizontalOptions="Center" BackgroundColor="#fbfaff"  CornerRadius="30" WidthRequest="300"></Button>
+                                    <Button IsEnabled="False" Grid.Row="5" HorizontalOptions="Center" BackgroundColor="#fbfaff"  CornerRadius="30" WidthRequest="300"></Button>
+
+                                    <Label Grid.Row="1" Text="1" FontSize="40" Margin="15,-3,0,0" TextColor="#CFB53B" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center" ></Label>
+                                    <Label Grid.Row="2" Text="2" FontSize="35" Margin="15,0,0,0" TextColor="#61616C" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center" ></Label>
+                                    <Label Grid.Row="3" Text="3" FontSize="35" Margin="15,0,0,0" TextColor="#B9683A" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center" ></Label>
+                                    <Label Grid.Row="4" Text="4" FontSize="35" Margin="15,0,0,0" TextColor="#bfbfbf" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center" ></Label>
+                                    <Label Grid.Row="5" Text="5" FontSize="35" Margin="15,0,0,0" TextColor="#bfbfbf" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center" ></Label>
+
+                                    <Label Grid.Row="1" x:Name="Top1Name" Text="Name" FontSize="25" Margin="55,0,0,0" TextColor="#969696" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center" ></Label>
+                                    <Label Grid.Row="2" x:Name="Top2Name" Text="Name" FontSize="25" Margin="55,0,0,0" TextColor="#969696" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center" ></Label>
+                                    <Label Grid.Row="3" x:Name="Top3Name" Text="Name" FontSize="25" Margin="55,0,0,0" TextColor="#969696" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center" ></Label>
+                                    <Label Grid.Row="4" x:Name="Top4Name" Text="Name" FontSize="25" Margin="55,0,0,0" TextColor="#969696" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center" ></Label>
+                                    <Label Grid.Row="5" x:Name="Top5Name" Text="Name" FontSize="25" Margin="55,0,0,0" TextColor="#969696" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center" ></Label>
+
+                                    <Label Grid.Row="1" x:Name="Top1Score" Text="000" FontSize="25" Margin="0,0,20,0" TextColor="#969696" FontAttributes="Bold" HorizontalOptions="End" VerticalOptions="Center" ></Label>
+                                    <Label Grid.Row="2" x:Name="Top2Score" Text="000" FontSize="25" Margin="0,0,20,0" TextColor="#969696" FontAttributes="Bold" HorizontalOptions="End" VerticalOptions="Center" ></Label>
+                                    <Label Grid.Row="3" x:Name="Top3Score" Text="000" FontSize="25" Margin="0,0,20,0" TextColor="#969696" FontAttributes="Bold" HorizontalOptions="End" VerticalOptions="Center" ></Label>
+                                    <Label Grid.Row="4" x:Name="Top4Score" Text="000" FontSize="25" Margin="0,0,20,0" TextColor="#969696" FontAttributes="Bold" HorizontalOptions="End" VerticalOptions="Center" ></Label>
+                                    <Label Grid.Row="5" x:Name="Top5Score" Text="000" FontSize="25" Margin="0,0,20,0" TextColor="#969696" FontAttributes="Bold" HorizontalOptions="End" VerticalOptions="Center" ></Label>
+
+
+                                </Grid>
+                            </Grid>
+                    </Grid>
+                </Frame>
+              </Grid>
+            </StackLayout>
+            
+            <StackLayout VerticalOptions="End"
+                          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.99}"
+                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.90}"
+                          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.10}">
+
+                <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                   <Grid Grid.Row="0" HorizontalOptions="Center" Padding="0,-15,0,10">
+                      <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="280"></ColumnDefinition>
+                     </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"></RowDefinition>
+                        </Grid.RowDefinitions>
+                      <ImageButton Grid.Row="0" Grid.Column="0" CornerRadius="20" BackgroundColor="#ded9ff"></ImageButton>
+                   </Grid>
+
+                  <Grid Grid.Row="0" HorizontalOptions="Center" Padding="0,-10,0,10">
+                         <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60"></ColumnDefinition>
+                            <ColumnDefinition Width="60"></ColumnDefinition>
+                            <ColumnDefinition Width="60"></ColumnDefinition>
+                            <ColumnDefinition Width="60"></ColumnDefinition>
+                         </Grid.ColumnDefinitions>
+                         <Grid.RowDefinitions>
+                            <RowDefinition Height="60"></RowDefinition>
+                         </Grid.RowDefinitions>
+                        <ImageButton x:Name="BtnPuzzleGameRecord" Clicked="BtnPuzzleGameRecord_Clicked" Grid.Row="0" Grid.Column="0" Aspect="Fill" Source="PuzzleGameIcon" CornerRadius="10" HorizontalOptions="Start" ></ImageButton>
+                        <ImageButton x:Name="BtnMemoryGameRecord" Clicked="BtnMemoryGameRecord_Clicked" Grid.Row="0" Grid.Column="3" Aspect="Fill" Source="MemoryGameIcon" CornerRadius="10" HorizontalOptions="Center" ></ImageButton>
+                        <ImageButton x:Name="BtnMathGameRecord" Clicked="BtnMathGameRecord_Clicked" Grid.Row="0" Grid.Column="1" Aspect="Fill" Source="MathGameIcon" CornerRadius="10" HorizontalOptions="End"  ></ImageButton>
+                        <ImageButton x:Name="BtnMathGameMinusRecord" Clicked="BtnMathGameMinusRecord_Clicked" Grid.Row="0" Grid.Column="2" Aspect="Fill" Source="MathGameMinusIcon" CornerRadius="10" HorizontalOptions="Center"></ImageButton>
+                     </Grid>
+                </Grid>
+            </StackLayout>
+            
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.RegisterUser"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="TaskListBackground.png">
+   
+    <ContentPage.Content>
+
+        <RelativeLayout>
+            <StackLayout>
+
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Row="1" Margin="-3,159,-3,-40" BorderColor="#fff" HasShadow="True"  CornerRadius="50" HeightRequest="1500" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20,50,20,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Row="0" Margin="0,-30,0,15" Text="Регистрация" FontAttributes="Bold" TextColor="#6a55f2" FontSize="30" HorizontalOptions="CenterAndExpand"></Label>
+                            <Frame Grid.Row="1" CornerRadius="30" BorderColor="#c2c8ff" BackgroundColor="#fafaff" HasShadow="True" WidthRequest="350" HeightRequest="20">
+                                <Entry HorizontalTextAlignment="Start" TextColor="#6a55f2" PlaceholderColor="#c2c8ff" Placeholder="Имя" Margin="0,-30,0,-30" x:Name="TxtName"></Entry>
+                            </Frame>
+                            <Frame Grid.Row="2" CornerRadius="30" BorderColor="#c2c8ff" BackgroundColor="#fafaff" HasShadow="True" WidthRequest="350" HeightRequest="20">
+                                <Entry HorizontalTextAlignment="Start" TextColor="#6a55f2" PlaceholderColor="#c2c8ff" Placeholder="Электронная почта"  Margin="0,-30,0,-30" x:Name="TxtEmail" ></Entry>
+                            </Frame>
+                            <Frame Grid.Row="3" CornerRadius="30" BorderColor="#c2c8ff" BackgroundColor="#fafaff"  HasShadow="True" WidthRequest="350" HeightRequest="20">
+                                <Entry HorizontalTextAlignment="Start"  TextColor="#6a55f2" PlaceholderColor="#c2c8ff" Placeholder="Пароль" IsPassword="True" Margin="0,-30,0,-30" x:Name="TxtPassword"></Entry>
+                            </Frame>
+                            <Frame Grid.Row="4" CornerRadius="30" BorderColor="#c2c8ff" BackgroundColor="#fafaff" HasShadow="True" WidthRequest="350" HeightRequest="20">
+                                <Entry HorizontalTextAlignment="Start" TextColor="#6a55f2" PlaceholderColor="#c2c8ff" Placeholder="Подтвердите пароль" IsPassword="True" Margin="0,-30,0,-30" x:Name="TxtConfirmPass" ></Entry>
+                            </Frame>
+                            <Button Grid.Row="6" FontSize="16" FontAttributes="Bold" Text="Зарегистрироваться" TextColor="#fff" BackgroundColor="#6a55f2" HeightRequest="50" x:Name="ButtonRegister" Clicked="ButtonRegister_Clicked" CornerRadius="30" Margin="35,0,35,0" ></Button>
+                            <Image Grid.Row="6" BackgroundColor="#6a55f2" x:Name="loadingView" IsVisible="False" IsAnimationPlaying="True" Source="Loading.png" Margin="125,0,125,0"  HeightRequest="50" ></Image>
+                        </Grid>
+                    </Frame>
+                </Grid>
+                
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center"
+                          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.99}"
+                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.90}"
+                          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.10}">
+                <Grid HorizontalOptions="Center" VerticalOptions="Center" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Label TextColor="#8473f5" Text="У вас уже есть аккаунт?" HorizontalOptions="End"></Label>
+                    <Label Text="Войти" FontAttributes="Bold" Grid.Column="1" HorizontalOptions="Start" x:Name="LblRegister" TextColor="#6a55f2" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="RegisterTap"
+                                              Tapped="LoginTap_Tapped"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                </Grid>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

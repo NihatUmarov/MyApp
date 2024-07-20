@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.ProfilePage"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="TaskListBackground.png">
+
+    <ContentPage.Content NavigationPage.HasNavigationBar="false" >
+        <RelativeLayout Padding="50" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout>
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="1000"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <ImageButton IsVisible="False" CornerRadius="10" BorderColor="Transparent" BackgroundColor="Transparent" Source="CrossImage" Grid.Row="0" HorizontalOptions="Start" Margin="10,10,10,-15" ></ImageButton>
+                    <ImageButton IsVisible="False" CornerRadius="10" Source="AccountImage" Grid.Row="0" HorizontalOptions="End" Margin="0,10,10,-15" ></ImageButton>
+                    <Grid Grid.Row="1" HorizontalOptions="Center" Padding="0,-10,0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="250"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button BackgroundColor="#49000000"  CornerRadius="30" ></Button>
+                    </Grid>
+                    <Grid HorizontalOptions="Center" Grid.Row="1"  Padding="0,-10,0,10" >
+                        <Grid HorizontalOptions="Center" VerticalOptions="Center" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="250"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Button x:Name="Records2" FontAttributes="Bold" FontSize="13" TextColor="White" Clicked="BtnRecords_Clicked2" Text="рекорды" WidthRequest="100" BackgroundColor="Transparent" VerticalOptions="Center" CornerRadius="30" HorizontalOptions="StartAndExpand" Margin="0,0,0,0" ></Button>
+                            <Button x:Name="Gaming2" TextTransform="Uppercase" FontSize="15" FontAttributes="Bold" TextColor="White" Clicked="BtnGamingClicked2" Text="игры" WidthRequest="105" BackgroundColor="Transparent" VerticalOptions="Center" CornerRadius="30" HorizontalOptions="Center" ></Button>
+                            <Button x:Name="UsersProfil2" FontAttributes="Bold" FontSize="13" TextColor="#FF8A2BE2" Clicked="UserProfil_Clicked2" Text="профиль" WidthRequest="100" BackgroundColor="White" VerticalOptions="Center" CornerRadius="30" HorizontalOptions="End" Margin="0,0,0,0" ></Button>
+
+                        </Grid>
+                    </Grid>
+                    <Frame Grid.Row="3" BackgroundColor="#fff"  BorderColor="#fff" CornerRadius="50" HeightRequest="1500">
+
+                        <Grid HorizontalOptions="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="140"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="160"></RowDefinition>
+                                <RowDefinition Height="110"></RowDefinition>
+                                <RowDefinition Height="110"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" >
+                                <ImageButton Grid.Row="0" CornerRadius="30" WidthRequest="140" Source="AccountImage" BackgroundColor="White"></ImageButton>
+                            </Grid>
+                            <Label Grid.Row="2"  HorizontalOptions="Center" FontAttributes="Bold" TextColor="#6a55f2" FontSize="30" x:Name="Name" Text="Name"></Label>
+                            <Grid Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20"></RowDefinition>
+                                    <RowDefinition Height="110"></RowDefinition>
+                                    <RowDefinition Height="110"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0"></ColumnDefinition>
+                                    <ColumnDefinition Width="160"></ColumnDefinition>
+                                    <ColumnDefinition Width="10"></ColumnDefinition>
+                                    <ColumnDefinition Width="160"></ColumnDefinition>
+                                    <ColumnDefinition Width="0"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <ImageButton Grid.Row="1" CornerRadius="20" Grid.Column="1" BackgroundColor="#ded9ff"></ImageButton>
+                                <Label Text="Игра пятнашки" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" Margin="0,10,0,0" VerticalOptions="Start" FontAttributes="Bold" TextColor="#6a55f2" FontSize="16"></Label>
+                                <Label Text="000" x:Name="PuzzleGameRecord" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" Margin="0,20,0,0" VerticalOptions="Center" FontAttributes="Bold" TextColor="#6a55f2" FontSize="30"></Label>
+
+                                <ImageButton  Grid.Row="1" Grid.Column="3" CornerRadius="20" BackgroundColor="#ded9ff"></ImageButton>
+                                <Label Text="Игра на память" Grid.Row="1" Grid.Column="3" HorizontalOptions="Center" Margin="0,10,0,0" VerticalOptions="Start" FontAttributes="Bold" TextColor="#6a55f2" FontSize="16"></Label>
+                                <Label Text="000" x:Name="MemoryGameRecord" Grid.Row="1" Grid.Column="3" HorizontalOptions="Center" Margin="0,20,0,0" VerticalOptions="Center" FontAttributes="Bold" TextColor="#6a55f2" FontSize="30"></Label>
+                                <ImageButton  Grid.Row="2" Grid.Column="1" CornerRadius="20" BackgroundColor="#ded9ff"></ImageButton>
+                                <Label Text="Сложение чисел" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" Margin="0,10,0,0" VerticalOptions="Start" FontAttributes="Bold" TextColor="#6a55f2" FontSize="16"></Label>
+                                <Label Text="000" x:Name="MathGameRecord" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" Margin="0,20,0,0" VerticalOptions="Center" FontAttributes="Bold" TextColor="#6a55f2" FontSize="30"></Label>
+                                <ImageButton  Grid.Row="2" Grid.Column="3" CornerRadius="20" BackgroundColor="#ded9ff"></ImageButton>
+                                <Label Text="Вычитание чисел" Grid.Row="2" Grid.Column="3" HorizontalOptions="Center" Margin="0,10,0,0" VerticalOptions="Start" FontAttributes="Bold" TextColor="#6a55f2" FontSize="16"></Label>
+                                <Label Text="000" x:Name="MathGameMinusRecord" Grid.Row="2" Grid.Column="3" HorizontalOptions="Center" Margin="0,20,0,0" VerticalOptions="Center" FontAttributes="Bold" TextColor="#6a55f2" FontSize="30"></Label>
+                            </Grid>
+                        </Grid>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="End"
+                          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.99}"
+                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.85}"
+                          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.10}">
+                <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="162"></ColumnDefinition>
+                        <ColumnDefinition Width="194"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Вы хотите " TextColor="#8473f5" HorizontalOptions="End" ></Label>
+                    <Label Text="Сменить аккаунт?" Grid.Column="1" HorizontalOptions="Start" FontAttributes="Bold" x:Name="LblRegister" TextColor="#6a55f2" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="ChangeUserTap" Tapped="ChangeUserTap_Tapped" ></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                </Grid>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
